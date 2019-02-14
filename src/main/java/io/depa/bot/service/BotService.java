@@ -7,7 +7,6 @@ import io.vertx.codegen.annotations.ProxyGen;
 import io.vertx.codegen.annotations.VertxGen;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
-import io.vertx.core.json.JsonObject;
 import io.vertx.reactivex.core.Vertx;
 
 @VertxGen
@@ -18,8 +17,8 @@ public interface BotService {
     String SERVICE_NAME = "bot-service";
 
     @GenIgnore
-    static BotService create(Vertx vertx, JsonObject config) {
-        return new BotServiceImpl(vertx, config);
+    static BotService create(Vertx vertx) {
+        return new BotServiceImpl(vertx);
     }
 
     @Fluent

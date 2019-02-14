@@ -18,7 +18,7 @@ public class BotServiceImpl implements BotService {
 
     private final WebClient webClient;
 
-    public BotServiceImpl(Vertx vertx, JsonObject config) {
+    public BotServiceImpl(Vertx vertx) {
         webClient = WebClient.create(vertx, new WebClientOptions().setTrustAll(true));
     }
 

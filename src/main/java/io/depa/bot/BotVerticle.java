@@ -28,13 +28,10 @@ public class BotVerticle extends RestfulVerticle {
     public void start(Future<Void> future) throws Exception {
         super.start();
 
-        int port = config().getInteger("http.port", DEFAULT_PORT);
-        String host = config().getString("http.host", "localhost");
+        int port = DEFAULT_PORT;
+        String host = "localhost";
 
-        LOGGER.info(config().getString("http.port"));
-        LOGGER.info(config().getString("http.host"));
-
-        botService = BotService.create(vertx, config());
+        botService = BotService.create(vertx);
 
         OpenAPI3RouterFactory.rxCreate(vertx, "swagger.yaml").subscribe(factory -> {
 
