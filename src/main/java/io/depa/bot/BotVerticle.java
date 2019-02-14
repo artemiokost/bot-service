@@ -31,9 +31,12 @@ public class BotVerticle extends RestfulVerticle {
         int port = config().getInteger("http.port", DEFAULT_PORT);
         String host = config().getString("http.host", "localhost");
 
+        LOGGER.info(config().getString("http.port"));
+        LOGGER.info(config().getString("http.host"));
+
         botService = BotService.create(vertx, config());
 
-        OpenAPI3RouterFactory.rxCreate(vertx, config().getString("open.api")).subscribe(factory -> {
+        OpenAPI3RouterFactory.rxCreate(vertx, "swagger.yaml").subscribe(factory -> {
 
             factory.addHandlerByOperationId("root", this::root);
             factory.addHandlerByOperationId("getByCategoryId", this::getByCategoryId);

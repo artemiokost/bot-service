@@ -69,14 +69,7 @@ compileJava {
     dependsOn annotationProcessing
 }
 
-task copyTask(type: Copy) {
-    from "src/config/docker.json"
-    into "build/libs/"
-}
-
 task stage(dependsOn: "build")
-
-compileJava.dependsOn copyTask
 
 wrapper {
     gradleVersion = "4.10"
