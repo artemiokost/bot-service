@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Bot service
+paths:
+  /:
+    get:
+      operationId: root
+      responses:
+        200:
+          description: Keyboard
+        default:
+          description: unexpected error
+  /category/{categoryId}:
+    get:
+      operationId: getByCategoryId
+      parameters:
+        - in: path
+          name: categoryId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Post list
+        default:
+          description: unexpected error

@@ -1,0 +1,5 @@
+{
+  "api.name": "bot",
+  "http.port": 443,
+  "open.api": "src/main/resources/swagger.yaml"
+}
