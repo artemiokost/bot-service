@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dserver.port=$PORT -jar bot-service.jar -conf docker.json
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar build/libs/bot-service.jar -conf docker.json
