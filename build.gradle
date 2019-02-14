@@ -68,6 +68,8 @@ compileJava {
     dependsOn annotationProcessing
 }
 
+task stage(dependsOn: "build")
+
 wrapper {
     gradleVersion = "4.10"
 }
