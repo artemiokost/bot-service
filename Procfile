@@ -1,1 +1,1 @@
-web: java -Dserver.port=8004 -jar build/libs/bot-service.jar
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar build/libs/bot-service.jar
