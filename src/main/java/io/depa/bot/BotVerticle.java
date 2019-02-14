@@ -16,8 +16,6 @@ public class BotVerticle extends RestfulVerticle {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BotVerticle.class);
 
-    private static final int DEFAULT_PORT = 443;
-
     private BotService botService;
 
     public static void main(String[] args) {
@@ -28,7 +26,7 @@ public class BotVerticle extends RestfulVerticle {
     public void start(Future<Void> future) throws Exception {
         super.start();
 
-        int port = DEFAULT_PORT;
+        int port = 8004;
         String host = "localhost";
 
         botService = BotService.create(vertx);
