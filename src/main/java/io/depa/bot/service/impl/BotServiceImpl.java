@@ -3,7 +3,6 @@ package io.depa.bot.service.impl;
 import io.depa.bot.service.BotService;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
-import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
 import io.vertx.ext.web.client.WebClientOptions;
