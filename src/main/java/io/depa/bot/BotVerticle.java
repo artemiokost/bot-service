@@ -26,7 +26,7 @@ public class BotVerticle extends RestfulVerticle {
     public void start(Future<Void> future) throws Exception {
         super.start();
 
-        int port = Integer.valueOf(System.getenv("PORT"));
+        int port = 8080; /*Integer.valueOf(System.getenv("PORT"));*/
         String host = "0.0.0.0";
 
         botService = BotService.create(vertx);

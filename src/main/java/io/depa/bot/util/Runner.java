@@ -13,7 +13,7 @@ public interface Runner {
 
     Logger LOGGER = LoggerFactory.getLogger(Runner.class);
 
-    String PATH = "src/main/config/local.json";
+    String PATH = "src/config/local.json";
 
     static void run(Class clazz){
 
